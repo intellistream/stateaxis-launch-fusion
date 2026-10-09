@@ -9,5 +9,9 @@
   "copied_evidence": "evidence/issue54-full-mlp-heterogeneous24-r3-npu4",
   "copied_evidence_sha256": "a0354b59f59ff3ff746dd59068973f509824d131642d57e24470ce459a963374",
   "qualification_inherited": false,
-  "implementation_extracted": false
+  "implementation_extracted": false,
+  "licensing": {
+    "scaffolding": "Apache-2.0",
+    "copied_evidence": "No additional license grant is inferred from this split."
+  }
 }

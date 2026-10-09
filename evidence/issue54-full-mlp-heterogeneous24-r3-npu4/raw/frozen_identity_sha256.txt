@@ -1,0 +1,6 @@
+1826e1d9bbccdeba7432fdabffb4644d4dec6892ce8e78352d8796f90ea22d12  .benchmarks/issue54-full-mlp-hetero24-build-r1/a-host/statecentric_qwen14b_b32_gate_up_swiglu_profile_probe
+bd9e73eabfe28d70bb270604afd31d0198f37af414ce24b46027228d40873b29  .benchmarks/issue54-full-mlp-hetero24-build-r3/a-pto/lib/libstatecentric_qwen14b_gate_up_swiglu_pto_kernel.so
+ee194aca64b443f0639263507338ba73448655caff82ddfc5977db058be8fca4  .benchmarks/issue54-full-mlp-hetero24-build-r3/a-pto/lib/libstatecentric_qwen14b_gate_up_stage.so
+ebb24bd800227f92c1839720f3cc576e5348e9d7258ce1eba77dbfa70ad8cf6d  .benchmarks/issue54-full-mlp-hetero24-build-r3/a-pto/lib/libstatecentric_qwen14b_swiglu_stage.so
+f140d002743803525446e9d846d78c2ca85f03445db357cf8090b8d3aeab774d  .benchmarks/issue54-full-mlp-hetero24-build-r3/a-pto/lib/libstatecentric_qwen14b_down_stage.so
+1c4545a527382d823fa13a592844bd586420d9255752f3101a7e2ff429eefec0  .benchmarks/issue54-full-mlp-hetero24-build-r1/oracle/expected_down_row_bf16_le.bin

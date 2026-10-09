@@ -1,0 +1,3 @@
+66a241d6f8076e5a1ce715000fac051cbb28332406314e2651bce29c5f408ced  /tmp/statecentric-next-npu/.benchmarks/issue54-full-mlp-hetero24-component-r3/control_0/stdout.json
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  /tmp/statecentric-next-npu/.benchmarks/issue54-full-mlp-hetero24-component-r3/control_0/stderr.txt
+58dd6983e508a18f06b2cdabec05329adc32d49f2a3ebf66f21837d0fc3e589e  /tmp/statecentric-next-npu/.benchmarks/issue54-full-mlp-hetero24-component-r3/control_0/output.bf16.bin

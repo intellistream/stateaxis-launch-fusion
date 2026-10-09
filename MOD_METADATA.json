@@ -1,0 +1,44 @@
+{
+  "schema_version": "vllm-hust-mod-metadata-v1",
+  "mod_id": "org.vllm-hust.stateaxis-launch-fusion",
+  "repository": "stateaxis-launch-fusion",
+  "display_name": "stateaxis-launch-fusion",
+  "canonical_repository": "https://github.com/intellistream/stateaxis-launch-fusion",
+  "responsibility": {
+    "organization": "intellistream",
+    "maintainers": [
+      {
+        "name": "Shuhao Zhang (Tony)",
+        "github": "ShuhaoZhangTony"
+      }
+    ],
+    "advisor_status": "not_declared",
+    "advisors": []
+  },
+  "lifecycle": {
+    "status": "experimental",
+    "default_enabled": false,
+    "activation_contract": "Import-only research descriptor; activation is refused until the StateAxis host contract and independent implementation are reviewed.",
+    "rollback_contract": "Disable or forget the descriptor and run the unchanged StateAxis host without this MOD."
+  },
+  "scope": {
+    "mechanism": "profile_guided_launch_fusion",
+    "supported_workloads": [],
+    "out_of_scope": [
+      "general performance claims",
+      "automatic inheritance from StateAxis aggregate evidence"
+    ]
+  },
+  "evidence": {
+    "qualification": "unqualified",
+    "latest_result": "evidence/issue54-full-mlp-heterogeneous24-r3-npu4",
+    "index": "EVIDENCE.md",
+    "performance_claims": [
+      {
+        "label": "inconclusive-tested-cell",
+        "scope": "frozen StateAxis source evidence only",
+        "result": "Candidate correctness passed, but the control stability gate failed; no performance conclusion is promoted."
+      }
+    ]
+  }
+}

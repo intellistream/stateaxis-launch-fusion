@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "format": "statecentric-issue54-full-mlp-heterogeneous24-r3-status-v1",
+  "issue": 54,
+  "completed": true,
+  "root_cause_fixed": true,
+  "r2_failure_preserved": true,
+  "physical_device": 4,
+  "arms": ["control_0", "candidate", "control_1"],
+  "warmups_per_arm": 5,
+  "samples_per_arm": 50,
+  "cross_arm_byte_exact": true,
+  "oracle_pass": true,
+  "control_drift_percent": 4.726761559090383,
+  "control_drift_limit_percent": 2.0,
+  "component_gate_pass": false,
+  "online_promotion_permitted": false,
+  "cleanup_pass": true,
+  "conclusion": "matched_negative_control_drift",
+  "default_enabled": false,
+  "speedup_claim": false,
+  "vllm_comparison": false
+}

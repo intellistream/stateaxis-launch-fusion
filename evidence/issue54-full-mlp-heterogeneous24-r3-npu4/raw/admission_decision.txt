@@ -1,0 +1,1 @@
+NPU4 selected: both fresh snapshots AICore=0; 62118 MiB free HBM; maximum free HBM within supported eligible set {4,7}.

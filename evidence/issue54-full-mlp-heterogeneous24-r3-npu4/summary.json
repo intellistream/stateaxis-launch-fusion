@@ -1,0 +1,94 @@
+{
+  "accepted": false,
+  "aggregate": {
+    "candidate_device_event_reduction_percent": 14.212689432537303,
+    "candidate_host_total_regression_percent": -16.939425012146412,
+    "control_device_event_mean_us": 432.0251992345,
+    "control_drift_percent": 4.726761559090383,
+    "control_host_total_mean_us": 510.35652,
+    "observed_npu4_hbm_increment_mib": 471,
+    "observed_npu4_hbm_min_mib": 3418,
+    "observed_npu4_hbm_peak_mib": 3889
+  },
+  "arms": {
+    "candidate": {
+      "backend": "pto_full",
+      "device_event_us": {
+        "max": 382.779985666,
+        "mean": 370.622799397,
+        "min": 366.659998894,
+        "p50": 370.180010796,
+        "p95": 374.727992713
+      },
+      "host_total_us": {
+        "max": 527.012,
+        "mean": 423.90506,
+        "min": 413.331,
+        "p50": 420.157,
+        "p95": 441.336
+      },
+      "oracle_pass": true,
+      "output_sha256": "58dd6983e508a18f06b2cdabec05329adc32d49f2a3ebf66f21837d0fc3e589e",
+      "samples": 50,
+      "signed_zero_only_mismatches": 9344
+    },
+    "control_0": {
+      "backend": "pto_aclnn_down",
+      "device_event_us": {
+        "max": 444.059997797,
+        "mean": 421.814798713,
+        "min": 416.799992323,
+        "p50": 420.350000262,
+        "p95": 429.144003987
+      },
+      "host_total_us": {
+        "max": 588.922,
+        "mean": 479.84686,
+        "min": 467.792,
+        "p50": 475.487,
+        "p95": 494.181
+      },
+      "oracle_pass": true,
+      "output_sha256": "58dd6983e508a18f06b2cdabec05329adc32d49f2a3ebf66f21837d0fc3e589e",
+      "samples": 50,
+      "signed_zero_only_mismatches": 9344
+    },
+    "control_1": {
+      "backend": "pto_aclnn_down",
+      "device_event_us": {
+        "max": 484.400004148,
+        "mean": 442.235599756,
+        "min": 427.359998226,
+        "p50": 439.970001578,
+        "p95": 452.806988358
+      },
+      "host_total_us": {
+        "max": 2182.372,
+        "mean": 540.86618,
+        "min": 492.743,
+        "p50": 502.0875,
+        "p95": 545.891
+      },
+      "oracle_pass": true,
+      "output_sha256": "58dd6983e508a18f06b2cdabec05329adc32d49f2a3ebf66f21837d0fc3e589e",
+      "samples": 50,
+      "signed_zero_only_mismatches": 9344
+    }
+  },
+  "cleanup_pass": true,
+  "component_gate_pass": false,
+  "conclusion": "matched_negative_control_drift",
+  "control_stability_pass": false,
+  "correctness_pass": true,
+  "cross_arm_byte_exact": true,
+  "device_reduction_pass": true,
+  "format": "statecentric-issue54-full-mlp-heterogeneous24-r3-audit-v1",
+  "host_regression_pass": true,
+  "issue": 54,
+  "online_promotion_permitted": false,
+  "schema_version": 1,
+  "source_publication_pass": true,
+  "speedup_claim": false,
+  "violations": [],
+  "vllm_comparison": false
+}

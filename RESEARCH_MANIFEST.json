@@ -1,0 +1,28 @@
+{
+  "schema_version": "stateaxis-mod-research/v1",
+  "mod_id": "org.vllm-hust.stateaxis-launch-fusion",
+  "release_version": "0.2.0",
+  "source": {
+    "repository": "Qixin-Gaoke/stateaxis",
+    "issue": 54,
+    "scope": "sealed physical-B32 Qwen2.5-14B full-MLP PTO launch path"
+  },
+  "mechanism": {
+    "enabled": true,
+    "scope": "qwen2.5-14b-bf16-physical-b32-full-mlp",
+    "decode_mlp_policy": "full_mlp_pto_b32_split_sealed",
+    "physical_batch": 32,
+    "sealed_component_required": true,
+    "closure_hash_required": true,
+    "workspace_bytes": 1769472,
+    "workspace_alignment": 512,
+    "non_b32_fallback": "aclnn_fused_gate_up_swiglu_and_down",
+    "exact_output_required": true,
+    "fail_closed": true
+  },
+  "evidence_boundary": {
+    "performance_qualified": false,
+    "historical_result": "candidate correctness and boundary reduction passed; matched control drift 4.727% exceeded the 2% stability gate",
+    "required_result": "repeat a stable matched real-online campaign before any throughput claim"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": "vllm-hust-benchmark/stateaxis-mod-on-off/v1",
+  "generated_at": "2026-10-11T12:00:00Z",
+  "mod_id": "org.vllm-hust.stateaxis-launch-fusion",
+  "release_version": "0.2.0",
+  "host": {
+    "repository": "Qixin-Gaoke/stateaxis",
+    "commit": "320ddd2dbba503c50c5f940d069f4d3e09e76a61",
+    "pull_request": 523,
+    "dirty": false
+  },
+  "activation": {
+    "manager": "vLLM-HUST Extension Manager/ECPA",
+    "manifest_schema": "0.3-experimental",
+    "research_manifest_sha256": "d292cc9603a0561b410f5a3a65219acc1762298f05d5f5b9ff1c42c7f85b14bc",
+    "extension_manifest_sha256": "f54aaf961c7c273e41f7802ae3bbc5e46c0dd795e3a9184bde38bcc8ad2e0c66",
+    "direct_policy_activation": "REJECTED_AS_REQUIRED",
+    "worker_environment_owner": "validated StateAxis host"
+  },
+  "mechanism": {
+    "scope": "qwen2.5-14b-bf16-physical-b32-full-mlp",
+    "decode_mlp_policy": "full_mlp_pto_b32_split_sealed",
+    "physical_batch": 32,
+    "sealed_component_required": true,
+    "closure_hash_required": true,
+    "workspace_bytes": 1769472,
+    "workspace_alignment": 512,
+    "non_b32_fallback": "aclnn_fused_gate_up_swiglu_and_down",
+    "exact_output_required": true,
+    "fail_closed": true,
+    "candidate_batch_telemetry": true
+  },
+  "validation": {
+    "rust_check": "PASS",
+    "rust_lib_tests": {"status": "PASS", "passed": 432, "failed": 0},
+    "final_hash_targeted_test": "PASS",
+    "complete_cann_atb_worker_build": "PASS"
+  },
+  "historical_matched_real_npu_component": {
+    "source": "evidence/issue54-full-mlp-heterogeneous24-r3-npu4/summary.json",
+    "workload": "Qwen2.5-14B BF16 physical-B32 full-MLP component probe on NPU4",
+    "order": ["control_0", "candidate", "control_1"],
+    "warmups_per_arm": 5,
+    "samples_per_arm": 50,
+    "cross_arm_byte_exact": true,
+    "oracle_pass": true,
+    "cleanup_pass": true,
+    "candidate_device_event_reduction_percent": 14.212689432537303,
+    "candidate_host_total_regression_percent": -16.939425012146412,
+    "control_drift_percent": 4.726761559090383,
+    "control_drift_limit_percent": 2,
+    "control_stability_pass": false,
+    "online_promotion_permitted": false,
+    "classification": "inconclusive_control_drift"
+  },
+  "current_real_online": {
+    "status": "NOT_RUN_NEW_IDENTITY_REQUIRES_FRESH_SEALED_ARTIFACT",
+    "performance_result": null,
+    "performance_qualified": false
+  },
+  "claim": "The active ECPA boundary is validated. Historical component timing moved positively, but failed the control-stability gate; no online or general speedup is claimed."
+}

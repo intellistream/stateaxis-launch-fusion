@@ -1,42 +1,48 @@
-# stateaxis-launch-fusion
+# StateAxis Launch Fusion
 
 Extension ID: `org.vllm-hust.stateaxis-launch-fusion`
 
-Profile-guided Gate/Up and MLP launch fusion.
+This MOD is the active, default-off ECPA boundary for StateAxis issue
+[#54](https://github.com/Qixin-Gaoke/stateaxis/issues/54). It admits exactly the
+reviewed Qwen2.5-14B BF16 physical-B32 full-MLP policy, requires the sealed PTO
+component and closure identity, and fails closed on every altered field.
 
-This repository is the independent MOD boundary for StateAxis issues [#54](https://github.com/Qixin-Gaoke/stateaxis/issues/54).
-It is deliberately `import_only`, default-off, and cannot be enabled. The split does
-not inherit correctness, device, performance, or publication qualification from the
-aggregate StateAxis repository.
+## Activation
 
-## Evidence boundary
-
-Status: **inconclusive**.
-
-Candidate correctness passed, but the control stability gate failed; no performance conclusion is promoted.
-
-The copied evidence and its SHA-256 are recorded in `PROVENANCE.json`. Negative,
-failed, and inconclusive results are retained. Microbenchmarks and component results
-must not be restated as online end-to-end gains.
-
-## Install and inspect
+The MOD is activated only through vLLM-HUST Extension Manager/ECPA. The
+StateAxis host validates the exact Manifest 0.3 payload and
+`RESEARCH_MANIFEST.json` SHA-256, fingerprints the identity into the assembly,
+and emits applied-candidate telemetry only when the sealed B32 path dispatches.
+Direct ambient selection of `full_mlp_pto_b32_split_sealed` is rejected.
 
 ```bash
 python -m pip install .
-vllm-hust-ext extension inspect org.vllm-hust.stateaxis-launch-fusion
-vllm-hust-ext extension check org.vllm-hust.stateaxis-launch-fusion
+VLLM_HUST_EXT_CONFIG=evidence/ecpa-contract-20261011/manager-config.json \
+  vllm-hust-ext extension check org.vllm-hust.stateaxis-launch-fusion
+VLLM_HUST_EXT_CONFIG=evidence/ecpa-contract-20261011/manager-config.json \
+  vllm-hust-ext run --dry-run -- /bin/true
 ```
 
-Discovery does not enable the MOD. A future active revision must extract an
-independently reviewable implementation, declare exclusive resources where needed,
-and pass exactness, lifecycle, release, failure-recovery, and matched real-online
-gates.
+Rollback is to disable the extension. The host then retains the ACLNN fused
+Gate/Up-SwiGLU-and-Down fallback and refuses the sealed policy.
+
+## Evidence boundary
+
+The retained physical-B32 component probe was cross-arm byte exact. Candidate
+device-event time improved 14.213% and host total time improved 16.939%, but
+control drift was 4.727%, above the 2% stability limit. The component result is
+therefore **inconclusive** and does not establish a real-online or general
+speedup. The current active Host/MOD identity has not received a fresh matched
+online run and remains performance-unqualified. See [EVIDENCE.md](EVIDENCE.md).
 
 ## Validate
 
 ```bash
 python -m pip install -e '.[test]'
+ruff check .
+ruff format --check .
 pytest -q
+python -m build
 ```
 
 Maintainer: Shuhao Zhang (Tony), directly responsible; no advisor is declared.

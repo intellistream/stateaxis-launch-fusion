@@ -2,7 +2,7 @@
   "schema_version": "vllm-hust-mod-metadata-v1",
   "mod_id": "org.vllm-hust.stateaxis-launch-fusion",
   "repository": "stateaxis-launch-fusion",
-  "display_name": "stateaxis-launch-fusion",
+  "display_name": "StateAxis Launch Fusion",
   "canonical_repository": "https://github.com/intellistream/stateaxis-launch-fusion",
   "responsibility": {
     "organization": "intellistream",
@@ -16,28 +16,33 @@
     "advisors": []
   },
   "lifecycle": {
-    "status": "experimental",
+    "status": "active_experimental",
     "default_enabled": false,
-    "activation_contract": "Import-only research descriptor; activation is refused until the StateAxis host contract and independent implementation are reviewed.",
-    "rollback_contract": "Disable or forget the descriptor and run the unchanged StateAxis host without this MOD."
+    "activation_contract": "Enable only through vLLM-HUST Extension Manager/ECPA with the exact Manifest 0.3 payload and research-manifest digest.",
+    "rollback_contract": "Disable the extension; the StateAxis host rejects the sealed full-MLP policy and retains the ACLNN fused fallback."
   },
   "scope": {
-    "mechanism": "profile_guided_launch_fusion",
-    "supported_workloads": [],
+    "mechanism": "identity_bound_sealed_physical_b32_full_mlp_launch_fusion",
+    "supported_workloads": [
+      "Qwen2.5-14B BF16 physical-B32 decode using the sealed full-MLP PTO component"
+    ],
     "out_of_scope": [
+      "non-B32 execution",
+      "unsealed component binaries or closure identities",
+      "non-Qwen2.5-14B models",
       "general performance claims",
       "automatic inheritance from StateAxis aggregate evidence"
     ]
   },
   "evidence": {
-    "qualification": "unqualified",
-    "latest_result": "evidence/issue54-full-mlp-heterogeneous24-r3-npu4",
+    "qualification": "inconclusive-historical-component-cell-current-online-unqualified",
+    "latest_result": "evidence/ecpa-contract-20261011/RESULT.json",
     "index": "EVIDENCE.md",
     "performance_claims": [
       {
         "label": "inconclusive-tested-cell",
-        "scope": "frozen StateAxis source evidence only",
-        "result": "Candidate correctness passed, but the control stability gate failed; no performance conclusion is promoted."
+        "scope": "Qwen2.5-14B BF16 physical-B32 full-MLP component probe on NPU4",
+        "result": "Cross-arm byte exact; candidate device-event time improved 14.213% and host total time improved 16.939%, but 4.727% control drift failed the 2% gate. No online or general gain is claimed."
       }
     ]
   }

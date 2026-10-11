@@ -1,7 +1,7 @@
 {
   "schema_version": "stateaxis-mod-provenance/v1",
   "source_repository": "Qixin-Gaoke/stateaxis",
-  "source_commit": "7562b5fa6f42e2e045a877b53ac934739e2cf230",
+  "source_commit": "320ddd2dbba503c50c5f940d069f4d3e09e76a61",
   "source_issues": [
     54
   ],
@@ -9,7 +9,7 @@
   "copied_evidence": "evidence/issue54-full-mlp-heterogeneous24-r3-npu4",
   "copied_evidence_sha256": "a0354b59f59ff3ff746dd59068973f509824d131642d57e24470ce459a963374",
   "qualification_inherited": false,
-  "implementation_extracted": false,
+  "implementation_extracted": true,
   "licensing": {
     "scaffolding": "Apache-2.0",
     "copied_evidence": "No additional license grant is inferred from this split."

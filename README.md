@@ -33,7 +33,10 @@ device-event time improved 14.213% and host total time improved 16.939%, but
 control drift was 4.727%, above the 2% stability limit. The component result is
 therefore **inconclusive** and does not establish a real-online or general
 speedup. The current active Host/MOD identity has not received a fresh matched
-online run and remains performance-unqualified. See [EVIDENCE.md](EVIDENCE.md).
+online run and remains performance-unqualified. The 2026-10-13 environment audit
+found an idle NPU but no official runtime-image launcher or fresh sealed artifact
+bound to the current Host/MOD identity; the occupied NPU was left untouched. See
+[EVIDENCE.md](EVIDENCE.md) for the reproducible blocker and evidence inventory.
 
 ## Validate
 

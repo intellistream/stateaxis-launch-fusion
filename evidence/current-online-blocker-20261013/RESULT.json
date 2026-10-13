@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "evidence_label": "current-online-reproducible-blocker",
+  "observed_at": "2026-10-13T00:56:30Z",
+  "mod": {
+    "id": "org.vllm-hust.stateaxis-launch-fusion",
+    "version": "0.2.0",
+    "commit": "8b64589ada5e6daaeb80c376f573d5c4da72e522",
+    "dirty": false
+  },
+  "host": {
+    "repository": "Qixin-Gaoke/stateaxis",
+    "commit": "16f6c9178c4a7820b4175e34829fa357e6c9ba80",
+    "dirty": false,
+    "runtime_integration_version": "0.3.0.dev43",
+    "runtime_image": null,
+    "build_source_closure_qualified": false,
+    "runtime_image_qualified": false,
+    "real_device_smoke_qualified": false
+  },
+  "manager": {
+    "repository": "vLLM-HUST/extension-manager",
+    "commit": "49a63b7c9306509780f983823c4d7027c7f445c7",
+    "dirty": false
+  },
+  "hardware": {
+    "visible": [
+      {
+        "physical_device": 4,
+        "model": "Ascend 910B2",
+        "occupied": true,
+        "process_id": 506748,
+        "hbm_used_mib": 53653
+      },
+      {
+        "physical_device": 5,
+        "model": "Ascend 910B2",
+        "occupied": false,
+        "hbm_used_mib": 3431
+      }
+    ],
+    "foreign_or_existing_process_terminated": false,
+    "npu_run_started": false
+  },
+  "launcher": {
+    "docker_available": false,
+    "sudo_available": false,
+    "fresh_sealed_artifact_found": false,
+    "searched_roots": [
+      "/data",
+      "/root/stateaxis",
+      "/root/stateaxis-evidence"
+    ]
+  },
+  "blocking_conditions": [
+    "the active Host/MOD identity requires a freshly built and hash-bound sealed physical-B32 full-MLP artifact",
+    "the current StateAxis runtime integration records no qualified runtime image or build-source closure",
+    "the container exposes no docker or sudo launcher for the official image build/run path",
+    "no matching fresh sealed artifact was found under the available evidence roots"
+  ],
+  "recovery": [
+    "produce and publish a source-closure-qualified sealed artifact for the active Host/MOD identity",
+    "provide a qualified runtime image or an equivalent non-container launch path",
+    "run at least three interleaved fresh-process OFF/ON pairs on an idle authorized NPU",
+    "verify exact outputs, candidate-batch telemetry, lifecycle cleanup, stable bracket controls and the preregistered serving gate"
+  ],
+  "performance_result": null,
+  "performance_qualified": false
+}

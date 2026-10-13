@@ -7,7 +7,9 @@
   ],
   "source_evidence": "results/issue54-full-mlp-heterogeneous24-r3-npu4",
   "copied_evidence": "evidence/issue54-full-mlp-heterogeneous24-r3-npu4",
-  "copied_evidence_sha256": "a0354b59f59ff3ff746dd59068973f509824d131642d57e24470ce459a963374",
+    "copied_evidence_sha256": "a0354b59f59ff3ff746dd59068973f509824d131642d57e24470ce459a963374",
+    "copied_evidence_repo_relative_sha256_inventory": "evidence/issue54-full-mlp-heterogeneous24-r3-npu4/SHA256SUMS",
+    "current_online_blocker": "evidence/current-online-blocker-20261013/RESULT.json",
   "qualification_inherited": false,
   "implementation_extracted": true,
   "licensing": {

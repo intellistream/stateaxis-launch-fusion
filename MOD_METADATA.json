@@ -35,14 +35,19 @@
     ]
   },
   "evidence": {
-    "qualification": "inconclusive-historical-component-cell-current-online-unqualified",
-    "latest_result": "evidence/ecpa-contract-20261011/RESULT.json",
+    "qualification": "historical_real_npu_component_inconclusive_current_online_blocked_missing_fresh_sealed_runtime",
+    "latest_result": "evidence/current-online-blocker-20261013/RESULT.json",
     "index": "EVIDENCE.md",
     "performance_claims": [
       {
         "label": "inconclusive-tested-cell",
         "scope": "Qwen2.5-14B BF16 physical-B32 full-MLP component probe on NPU4",
         "result": "Cross-arm byte exact; candidate device-event time improved 14.213% and host total time improved 16.939%, but 4.727% control drift failed the 2% gate. No online or general gain is claimed."
+      },
+      {
+        "label": "current-online-reproducible-blocker",
+        "scope": "active MOD 0.2.0 and StateAxis main 16f6c917 on 2026-10-13",
+        "result": "An idle Ascend 910B2 was visible, but the current runtime integration has no qualified image or build-source closure, the container has no docker/sudo launcher, and no fresh sealed full-MLP artifact bound to the active Host/MOD identity exists under the available evidence roots. No NPU run was started and the occupied device was not disturbed."
       }
     ]
   }
